@@ -1,0 +1,48 @@
+/* =================================
+   Base styles
+   ================================= */
+
+@-ms-viewport
+{
+  width: device-width;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: @brandMain;
+	color: @fontMainColor;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    color: @brandMain; 
+    &:hover,
+    &:focus {
+        color: @fontMainColor;
+    }
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: vertical;
+}
