@@ -28,7 +28,8 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     compress: true,
-                    sourceMap: true
+                    sourceMap: true,
+                    sourceMapRootpath: '/'
                 },
                 files: {
                     "build/css/core.css": "assets/less/core.less"
