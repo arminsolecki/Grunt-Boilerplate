@@ -1,7 +1,4 @@
 module.exports = function (grunt) {
-    grunt.registerTask('watch', ['watch']);
-	grunt.registerTask('connect', ['connect']);
-
     grunt.initConfig({
         concat: {
             js: {
@@ -49,8 +46,10 @@ module.exports = function (grunt) {
         },
 		connect: {
 			server: {
-				port: 8000,
-				base: './'
+				options: {
+					port: 8000,
+					base: './'
+				}
 			}
 		},
         watch: {
@@ -84,4 +83,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	
+	grunt.registerTask('default', ['connect', 'watch']);
 };
